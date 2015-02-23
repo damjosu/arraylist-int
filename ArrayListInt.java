@@ -85,6 +85,19 @@ public class ArrayListInt
         return contiene;
     }
     
+    /**
+     * Devuelve el elemento existente en la posición indicada.
+     * @param index El indice.
+     */
+    public int get(int index)
+    {
+        int elemento = -1;
+        if((index < lista.length) && (index >= 0))
+        {
+            elemento = lista[index];
+        }
+        return elemento;
+    }
     
     public void imprime()
     {
