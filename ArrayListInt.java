@@ -57,7 +57,7 @@ public class ArrayListInt
             System.out.println("Introduce un índice que esté entre 0 y " + size);
         }
     }
-    
+
     /**
      * Vacia la colección.
      */
@@ -65,7 +65,7 @@ public class ArrayListInt
     {
         lista = new int[0];
     }    
-    
+
     /**
      * Devuelve true si contiene el elemento.
      * @param elemento El elemento a buscar en la colección.
@@ -84,7 +84,7 @@ public class ArrayListInt
         }
         return contiene;
     }
-    
+
     /**
      * Devuelve el elemento existente en la posición indicada.
      * @param index El indice.
@@ -98,12 +98,47 @@ public class ArrayListInt
         }
         return elemento;
     }
+
+    /**
+     * Reemplaza el elemento en la posición `index` con el valor de `element`
+     * @param index El indice del elemento a reemplazar.
+     * @param element El elemento por el que reemplazas.
+     */
+    public void set(int index, int element)
+    {
+        if((index < lista.length) && (index >= 0))
+        {
+            lista[index] = element;
+        }
+    }
+    
+    /**
+     * Devuelve el indice en el que aparece la primera ocurrencia del elemento especificado
+     * @param elemento El elemento a buscar.
+     */
+    public int indexOf(int elemento)
+    {
+        boolean encontrado = false;
+        int i = 0;
+        int index = -1;
+        while((i < lista.length) && !(encontrado))
+        {
+            if(lista[i] == elemento)
+            {
+                index = i;
+                encontrado = true;
+            }
+            i++;            
+        }
+        return index;
+    }
     
     public void imprime()
     {
         for(int i = 0; i < lista.length; i++)
         {
-             System.out.println(lista[i]);
+            System.out.println(lista[i]);
         }
     }
+
 }
