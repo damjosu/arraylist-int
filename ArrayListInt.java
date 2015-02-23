@@ -56,6 +56,14 @@ public class ArrayListInt
         {
             System.out.println("Introduce un índice que esté entre 0 y " + size);
         }
-    }    
+    }
+    
+    /**
+     * Vacia la colección.
+     */
+    public void clear()
+    {
+        lista = new int[0];
+    }
     
 }
