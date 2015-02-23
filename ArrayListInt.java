@@ -172,12 +172,12 @@ public class ArrayListInt
         return elemento;
     }
     
-    public void imprime()
+    /**
+     * Devuelve el número de elementos de la colección.
+     */
+    public int size()
     {
-        for(int i = 0; i < lista.length; i++)
-        {
-            System.out.println(lista[i]);
-        }
+        return lista.length;
     }
-
+    
 }
