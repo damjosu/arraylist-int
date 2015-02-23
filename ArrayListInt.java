@@ -64,6 +64,33 @@ public class ArrayListInt
     public void clear()
     {
         lista = new int[0];
+    }    
+    
+    /**
+     * Devuelve true si contiene el elemento.
+     * @param elemento El elemento a buscar en la colección.
+     */
+    public boolean contains(int elemento)
+    {
+        boolean contiene = false;
+        int  i = 0;
+        while (i < lista.length && !(contiene))
+        {
+            if(lista[i] == elemento)
+            {
+                contiene = true;
+            }
+            i++;
+        }
+        return contiene;
     }
     
+    
+    public void imprime()
+    {
+        for(int i = 0; i < lista.length; i++)
+        {
+             System.out.println(lista[i]);
+        }
+    }
 }
