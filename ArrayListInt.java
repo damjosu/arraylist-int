@@ -133,6 +133,19 @@ public class ArrayListInt
         return index;
     }
     
+    /**
+     * Devuelve `true` si la lista no contiene elementos.
+     */
+    public boolean isEmpty()
+    {
+        boolean vacia = false;
+        if(lista.length == 0)
+        {
+            vacia = true;
+        }
+        return vacia;
+    }
+    
     public void imprime()
     {
         for(int i = 0; i < lista.length; i++)
