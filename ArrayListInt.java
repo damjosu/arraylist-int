@@ -146,6 +146,32 @@ public class ArrayListInt
         return vacia;
     }
     
+    /**
+     * Elimina de la colección el elemento que ocupa la posición especificada y devuelve dicho elemento.
+     * @param index El indice del elemento a eliminar
+     */
+    public int remove(int index)
+    {
+        int elemento = -1;
+        int size = lista.length;
+        int temp[] = new int[size - 1];
+        int i = 0;
+        if ((index <= size) && (index >= 0))
+        {
+             for(; i < index; i++)
+            {
+                temp[i] = lista[i];
+            }
+            elemento = lista[i];        
+            for(int cont = i; cont < (size - 1); cont++)
+            {
+                temp[cont] = lista[cont + 1];
+            }
+            lista = temp;
+        }       
+        return elemento;
+    }
+    
     public void imprime()
     {
         for(int i = 0; i < lista.length; i++)
